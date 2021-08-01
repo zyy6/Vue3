@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
 
 
-import App from './02_compositionAPI/App.vue' // composition API
+// composition API
+// import App from './02_compositionAPI/App.vue' 
+
+// refAPI的补充
+import App from './03_refApi的补充/app.vue' 
 
 createApp(App).mount('#app')
