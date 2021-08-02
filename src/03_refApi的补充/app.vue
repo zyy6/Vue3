@@ -4,8 +4,11 @@
 
         {{name}}
         {{age}}
-
         {{name3}}
+
+        <!--自定义ref -->
+        <input v-model="val">
+        {{val}}
     </div>
 </template>
 
@@ -15,6 +18,8 @@ import {
     toRefs,
     toRef
     } from 'vue'
+
+import {AntiShakeRef} from './hook/useDebounceRef'
 export default {
     setup() {
         // 使用 reactive 创建响应式对象
@@ -31,12 +36,15 @@ export default {
         const name3 = toRef(reactive1,'name')
 
         console.log(reactive1); 
+
+        const val = AntiShakeRef()
         
         return {
             reactive1,
             name,
             age,
-            name3
+            name3,
+            val
         }
     }
 }
