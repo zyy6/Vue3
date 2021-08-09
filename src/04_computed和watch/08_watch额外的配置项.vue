@@ -29,7 +29,7 @@ export default {
 
 
         const click = ()=>{
-            info.obj.num++
+            info.obj.num++ 
         }
         return {
             click
